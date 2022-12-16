@@ -1,4 +1,6 @@
-#!/home/ali/Devops/skylogs/django-statsd-monitoring/django-prometheus-via-statsd/olympus-app/venv/bin/python
+#!/bin/sh
+'''exec' /home/ali/Devops/skylogs/django-statsd-monitoring/django-prometheus-via-statsd/django-metrics-prometheus/olympus-app/venv/bin/python "$0" "$@"
+' '''
 # -*- coding: utf-8 -*-
 import re
 import sys

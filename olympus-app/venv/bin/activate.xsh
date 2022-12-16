@@ -28,7 +28,7 @@ def _deactivate(args):
 _deactivate(["nondestructive"])
 aliases["deactivate"] = _deactivate
 
-$VIRTUAL_ENV = r"/home/ali/Devops/skylogs/django-statsd-monitoring/django-prometheus-via-statsd/olympus-app/venv"
+$VIRTUAL_ENV = r"/home/ali/Devops/skylogs/django-statsd-monitoring/django-prometheus-via-statsd/django-metrics-prometheus/olympus-app/venv"
 
 $_OLD_VIRTUAL_PATH = $PATH
 $PATH = $PATH[:]
