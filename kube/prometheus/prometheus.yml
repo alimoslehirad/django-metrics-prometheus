@@ -1,0 +1,19 @@
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  - job_name: 'olympus-app'
+    kubernetes_sd_configs:
+      - role: pod
+
+    # We model Kubernetes Services as Prometheus Jobs and
+    # individual Pods as Prometheus Instances, so metrics look like
+    # 'hello_requests_total_counter{instance="olympus-deployment-564430835-gdb24",job="olympus-app"} 42'.
+    relabel_configs:
+      - source_labels: [__meta_kubernetes_pod_label_app]
+        regex: olympus
+        action: keep
+      - source_labels: [__meta_kubernetes_pod_name]
+        target_label: instance
+        action: replace
